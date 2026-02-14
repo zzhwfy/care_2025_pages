@@ -95,7 +95,7 @@ The dataset has been divided into three main parts: training, validation, and te
 - **Validation Set**: 10 LGE MRIs from Center A and 10 LGE MRIs from Center C 
 - **Test Set**: 14 LGE MRIs from Center A, 20 LGE MRIs from Center B and 10 LGE MRIs from Center C  <!-- , 40 LGE MRIs from Center 2.2-->
 
-*Task 2*:
+*Task 3*:
 - **Training Set**: 150 CTs from Center D
 - **Validation Set**: 20 CTs from Center D
 - **Test Set**: 130 CTs from Center D 
@@ -128,7 +128,7 @@ The performance of LA cavity segmentation, LA scar quantification and cardiac st
 - **Average Surface Distance (ASD)**
 - **Hausdorff Distance (HD)**
 
-**Task 3**:
+**Task 3**:S
 - **Dice Similarity Coefficient (DSC)**
 - **Average Surface Distance (ASD)**
 - **Hausdorff Distance (HD)**
