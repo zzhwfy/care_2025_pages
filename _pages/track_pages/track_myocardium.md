@@ -37,8 +37,8 @@ Myocardial infarction (MI) is a major cause of mortality and disability worldwid
 The target of this track is to segment myocardial pathology regions, specifically scar and edema, from multi-sequence CMR data. This track seeks innovative solutions to address MyoPS using real-world multi-sequence CMR data. We encourage participants to overcome challenges such as the inclusion of multi-center data, missing sequences for some centers <d-cite key="myops2"></d-cite>, and misalignments in multi-sequence CMRs <d-cite key="myops3"></d-cite>, as illustrated in Figure 1 (B).
 
 ### Subtasks
-- MyoPS Subtask: LGE, T2 and 3D cine sequences.
-- Cine MyoPS Subtask: LGE, T2 and 4D cine sequences. The temporal dimension of the cine sequence is provided for contextual information. The segmentation target is the myocardial pathology at the first frame of the cine sequence. 
+- MyoPS Subtask: LGE, T2 and 3D bSSFP sequences.
+- Cine MyoPS Subtask: LGE, T2 and 4D bSSFP sequences. The temporal dimension of the cine sequence is provided for contextual information. The segmentation target is the myocardial pathology at the first frame of the cine sequence. 
 
 The specific  substructures, each associated with a unique label value, are:
 1. **Scar** - Label value: 2221
@@ -52,9 +52,10 @@ We will rank participant methods based on the settings (​Lb1–Lb4) detailed i
 
 <div style="display: flex;">
 <table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
-<caption style="caption-side: top; text-align: left; font-weight: bold; padding-bottom: 10px;"> Leaderboard (Lb) for MyoPS track across targets and evaluation settings.​​ Lb1–Lb4 represent performance from different test centers and targets (e.g., Lb1 = scar segmentation peformance on center B). In-distribution refers to centers included in the training data, while out-of-distribution refers to unseen centers not used during training.</caption>
+<caption style="caption-side: top; text-align: left; font-weight: bold; padding-bottom: 10px;"> Leaderboard (Lb) for MyoPS track across targets and evaluation settings.​​ Lb1–Lb6 represent performance from different test centers and targets (e.g., Lb1 = scar segmentation peformance on center B). In-distribution refers to centers included in the training data, while out-of-distribution refers to unseen centers not used during training.</caption>
   <thead>
     <tr>
+      <th style="text-align:center;">Subtask</th>
       <th style="text-align:center;">Target</th>
       <th style="text-align:center;">In-distribution</th>
       <th style="text-align:center;">Out-of-distribution</th>
@@ -62,14 +63,22 @@ We will rank participant methods based on the settings (​Lb1–Lb4) detailed i
   </thead>
   <tbody>
     <tr>
+      <td>MyoPS</td>
       <td>Scar</td>
       <td>Lb1</td>
       <td>Lb2</td>
     </tr>
     <tr>
+      <td>MyoPS</td>
       <td>Edema</td>
       <td>Lb3</td>
       <td>Lb4</td>
+    </tr>
+    <tr>
+      <td>CineMyoPS</td>
+      <td>Scar</td>
+      <td>Lb5</td>
+      <td>Lb6</td>
     </tr>
   </tbody>
 </table>
@@ -134,12 +143,6 @@ Leaderboards are maintained separately for the 3D Cine and 4D Cine subtasks.
       <td>H</td>
       <td>35</td>
       <td>LGE </td>
-      <td>Scar</td>
-    </tr>
-    <tr>
-      <td>I</td>
-      <td>40</td>
-      <td>LGE and bSSFP</td>
       <td>Scar</td>
     </tr>
   </tbody>
@@ -213,9 +216,9 @@ Leaderboards are maintained separately for the 3D Cine and 4D Cine subtasks.
   </thead>
   <tbody>
     <tr>
-      <td>C</td>
+      <td>β</td>
       <td>25</td>
-      <td>LGE, T2 and bSSFP</td>
+      <td>bSSFP</td>
       <td>Scar, edema, left ventricle,  myocardium and right ventricle</td>
     </tr>
 
@@ -240,9 +243,9 @@ Leaderboards are maintained separately for the 3D Cine and 4D Cine subtasks.
   </thead>
   <tbody>
     <tr>
-      <td>C</td>
+      <td>β</td>
       <td>5</td>
-      <td>LGE, T2 and bSSFP</td>
+      <td>bSSFP</td>
       <td>Scar, edema, left ventricle,  myocardium and right ventricle</td>
     </tr>
 
@@ -264,21 +267,21 @@ Leaderboards are maintained separately for the 3D Cine and 4D Cine subtasks.
   </thead>
   <tbody>
     <tr>
-      <td>B</td>
+      <td>α</td>
       <td>25</td>
-      <td>LGE, T2 and bSSFP</td>
+      <td>bSSFP</td>
       <td>Scar, edema, left ventricle,  myocardium and right ventricle</td>
     </tr>
     <tr>
-      <td>C</td>
+      <td>β</td>
       <td>14</td>
-      <td>LGE, T2 and bSSFP</td>
+      <td>bSSFP</td>
       <td>Scar, edema, left ventricle,  myocardium and right ventricle</td>
     </tr>
         <tr>
-      <td>J</td>
+      <td>γ</td>
       <td>120</td>
-      <td>LGE, and bSSFP</td>
+      <td>bSSFP</td>
       <td>Scar, left ventricle,  myocardium</td>
     </tr>
   </tbody>
@@ -290,8 +293,6 @@ Leaderboards are maintained separately for the 3D Cine and 4D Cine subtasks.
 
 The performance of scar and edema segmentation results will be evaluated by：
 - **Dice Similarity Coefficient (Dice)**
-- **Precision (Pre)**
-- **Sensitivity (Sen)**
 - **Hausdorff Distance (HD in mm)**
 
 ## Rules
@@ -302,112 +303,7 @@ The performance of scar and edema segmentation results will be evaluated by：
 To access the dataset, please register [here](http://zmic.org.cn/care_2025/eval/register?track=myops).
 
 
-## Leaderboards
 
-#### MyoPS Scar (ID)
-
-<div style="display:flex; flex-direction:column; gap:8px;">
-<table class="scar table table-sm table-hover border-bottom" style="table-layout:fixed;width:80%;align:center;color:black;">
-  <thead>
-    <tr>
-      <th style="text-align:center;"><strong>Team</strong></th>
-      <th style="text-align:center;"><strong>Scar_Dice↑</strong></th>
-      <th style="text-align:center;"><strong>Scar_Sen↑</strong></th>
-      <th style="text-align:center;"><strong>Scar_Pre↑</strong></th>
-      <th style="text-align:center;"><strong>Scar_HD(mm)↓</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>JMT</td><td>0.4864</td><td>0.6580</td><td>0.4117</td><td>31.9086</td></tr>
-    <tr><td>ZXN</td><td>0.4329</td><td>0.5863</td><td>0.3833</td><td>37.4517</td></tr>
-    <tr><td>FireMan</td><td>0.4694</td><td>0.6572</td><td>0.3935</td><td>30.2447</td></tr>
-    <tr><td>king</td><td>0.4245</td><td>0.5416</td><td>0.3744</td><td>46.7791</td></tr>
-    <tr><td>marisabe</td><td>0.4841</td><td>0.6177</td><td>0.4221</td><td>29.2022</td></tr>
-    <tr><td>fpt</td><td>0.4933</td><td>0.6075</td><td>0.4390</td><td>28.7960</td></tr>
-    <tr><td>David</td><td>0.4248</td><td>0.5469</td><td>0.3772</td><td>46.8064</td></tr>
-    <tr><td>Space</td><td>0.4642</td><td>0.6750</td><td>0.3875</td><td>35.8338</td></tr>
-  </tbody>
-</table>
-</div>
-
-#### MyoPS Scar (OOD)
-
-<div style="display:flex; flex-direction:column; gap:8px;">
-<table class="scar table table-sm table-hover border-bottom" style="table-layout:fixed;width:80%;align:center;color:black;">
-  <thead>
-    <tr>
-      <th style="text-align:center;"><strong>Team</strong></th>
-      <th style="text-align:center;"><strong>Scar_Dice↑</strong></th>
-      <th style="text-align:center;"><strong>Scar_Sen↑</strong></th>
-      <th style="text-align:center;"><strong>Scar_Pre↑</strong></th>
-      <th style="text-align:center;"><strong>Scar_HD(mm)↓</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>JMT</td><td>0.6780</td><td>0.6126</td><td>0.7747</td><td>15.6920</td></tr>
-    <tr><td>ZXN</td><td>0.6667</td><td>0.6140</td><td>0.7549</td><td>16.1454</td></tr>
-    <tr><td>FireMan</td><td>0.6826</td><td>0.6394</td><td>0.7436</td><td>20.8305</td></tr>
-    <tr><td>king</td><td>0.7387</td><td>0.6888</td><td>0.8160</td><td>13.5691</td></tr>
-    <tr><td>marisabe</td><td>0.6573</td><td>0.5812</td><td>0.7775</td><td>17.2670</td></tr>
-    <tr><td>fpt</td><td>0.6459</td><td>0.5769</td><td>0.7550</td><td>24.1498</td></tr>
-    <tr><td>David</td><td>0.6654</td><td>0.6168</td><td>0.7747</td><td>16.4942</td></tr>
-    <tr><td>Space</td><td>0.5616</td><td>0.5991</td><td>0.5833</td><td>18.9891</td></tr>
-  </tbody>
-</table>
-</div>
-
-
-#### MyoPS Edema (ID)
-
-<div style="display:flex; flex-direction:column; gap:8px;">
-<table class="edema table table-sm table-hover border-bottom" style="table-layout:fixed;width:80%;align:center;color:black;">
-  <thead>
-    <tr>
-      <th style="text-align:center;"><strong>Team</strong></th>
-      <th style="text-align:center;"><strong>Edema_Dice↑</strong></th>
-      <th style="text-align:center;"><strong>Edema_Sen↑</strong></th>
-      <th style="text-align:center;"><strong>Edema_Pre↑</strong></th>
-      <th style="text-align:center;"><strong>Edema_HD(mm)↓</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>JMT</td><td>0.6061</td><td>0.6775</td><td>0.5873</td><td>32.1836</td></tr>
-    <tr><td>ZXN</td><td>0.6499</td><td>0.6430</td><td>0.6992</td><td>31.8488</td></tr>
-    <tr><td>FireMan</td><td>0.5935</td><td>0.7099</td><td>0.5361</td><td>31.1575</td></tr>
-    <tr><td>king</td><td>0.5187</td><td>0.6030</td><td>0.4826</td><td>46.2529</td></tr>
-    <tr><td>marisabe</td><td>0.5633</td><td>0.6430</td><td>0.5390</td><td>32.0530</td></tr>
-    <tr><td>fpt</td><td>0.6180</td><td>0.6247</td><td>0.6597</td><td>32.7830</td></tr>
-    <tr><td>David</td><td>0.5753</td><td>0.6227</td><td>0.5757</td><td>39.8774</td></tr>
-    <tr><td>Space</td><td>0.5953</td><td>0.6128</td><td>0.6310</td><td>33.8135</td></tr>
-  </tbody>
-</table>
-</div>
-
-#### MyoPS Edema (OOD)
-
-<div style="display:flex; flex-direction:column; gap:8px;">
-<table class="edema table table-sm table-hover border-bottom" style="table-layout:fixed;width:80%;align:center;color:black;">
-  <thead>
-    <tr>
-      <th style="text-align:center;"><strong>Team</strong></th>
-      <th style="text-align:center;"><strong>Edema_Dice↑</strong></th>
-      <th style="text-align:center;"><strong>Edema_Sen↑</strong></th>
-      <th style="text-align:center;"><strong>Edema_Pre↑</strong></th>
-      <th style="text-align:center;"><strong>Edema_HD(mm)↓</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>JMT</td><td>0.6655</td><td>0.5980</td><td>0.8039</td><td>21.8737</td></tr>
-    <tr><td>ZXN</td><td>0.6857</td><td>0.6339</td><td>0.7866</td><td>19.3169</td></tr>
-    <tr><td>FireMan</td><td>0.6819</td><td>0.6840</td><td>0.7211</td><td>22.2706</td></tr>
-    <tr><td>king</td><td>0.7585</td><td>0.7677</td><td>0.7715</td><td>14.7051</td></tr>
-    <tr><td>marisabe</td><td>0.6554</td><td>0.6371</td><td>0.7158</td><td>22.7204</td></tr>
-    <tr><td>fpt</td><td>0.6404</td><td>0.5548</td><td>0.7932</td><td>27.0451</td></tr>
-    <tr><td>David</td><td>0.6878</td><td>0.6208</td><td>0.8070</td><td>19.7881</td></tr>
-    <tr><td>Space</td><td>0.6392</td><td>0.5741</td><td>0.7551</td><td>22.4153</td></tr>
-  </tbody>
-</table>
-</div>
 
 
 ## Citations
