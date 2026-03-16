@@ -8,9 +8,10 @@ toc:
   - name: Motivation
   - name: Task
   - name: Data
-  - name: Metrics
   - name: Rules
   - name: Registration
+  - name: Metrics
+  - name: Award Policy
   - name: Leaderboards
   - name: Citations
   - name: Contact
@@ -36,7 +37,6 @@ Cardiovascular diseases (CVDs), as the leading cause of death globally<d-cite ke
 ## Task
 {% include figure.liquid loading="eager" path="/assets/img/whs.png" class="img-fluid" zoomable=true max-width="70%" caption="Figure 1. Overview of CARE-Whole Heart" %}
 
-
 The objective of this track is to achieve precise segmentation of seven substructures of the whole heart, with robustness against domain shifts (see Fig. 1).  
 The specific substructures, each associated with a unique label value, are:
 
@@ -49,35 +49,8 @@ The specific substructures, each associated with a unique label value, are:
 7. **Pulmonary Artery (PA)** - Label value: 850; defined as the initial segment from the pulmonary valve to the bifurcation point.
 
 
-
 **Note on Great Vessels:** The great vessels of interest, comprising the ascending aorta and pulmonary artery, are specifically defined due to variations in the fields of view across different scans. This uniform definition is crucial for ensuring consistency across evaluations. During the assessment, segmentation results for these vessels will be truncated to average lengths measured in healthy subjects, although participants are encouraged to extend their segmentation beyond these lengths. Our provided manual segmentations similarly cover more than the defined trunk measurements.
 
-We will rank participant methods based on the settings (​Lb1–Lb4) detailed in the following table:
-
-<div style="display: flex;">
-<table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
-<caption style="caption-side: top; text-align: left; font-weight: bold; padding-bottom: 10px;width: 100%;"> Leaderboard (Lb) for CARE-Whole Heart track across modalities and evaluation settings.​​ Lb1–Lb4 represent performance from different test centers and modalities (e.g., Lb1 = CT segmentation peformance on center A and B). In-distribution refers to centers included in the training data, while out-of-distribution refers to unseen centers not used during training.</caption>
-  <thead>
-    <tr>
-      <th style="text-align:center;">Modality</th>
-      <th style="text-align:center;">In-distribution</th>
-      <th style="text-align:center;">Out-of-distribution</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>CT</td>
-      <td>Lb1</td>
-      <td>Lb2</td>
-    </tr>
-    <tr>
-      <td>MR</td>
-      <td>Lb3</td>
-      <td>Lb4</td>
-    </tr>
-  </tbody>
-</table>
-</div>
 
 ## Data
 
@@ -90,8 +63,7 @@ Siemens Avanto 1.5T, Toshiba Aquilion ONE CT scanner.
 
 **3) Data format:** The data are all in Nifty format. Each training case has one CT or MRI scan with its corresponding label.
 
-
-### Training data
+### Training data (106 Cases)
 
 <div style="display: flex;">
 <table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
@@ -123,11 +95,32 @@ Siemens Avanto 1.5T, Toshiba Aquilion ONE CT scanner.
       <td>26</td>
       <td>MRI</td>
     </tr>
+    <tr>
+      <td>G</td>
+      <td>20</td>
+      <td>CT</td>
+    </tr>
   </tbody>
 </table>
 </div>
 
-### Validation data
+```
+A ct_train
+  |-- Case1001_image.nii.gz
+  |-- Case1001_label.nii.gz
+  |-- ...
+B ct_train
+  |-- Case2001_image.nii.gz
+  |-- Case2001_label.nii.gz
+  |-- ...
+C and D mr_train
+  |-- Case3001_image.nii.gz
+  |-- Case3001_label.nii.gz
+  |-- ...
+...
+```
+
+### Validation data (50 Cases)
 
 <div style="display: flex;">
 <table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
@@ -158,7 +151,14 @@ Siemens Avanto 1.5T, Toshiba Aquilion ONE CT scanner.
 </table>
 </div>
 
-### Test data
+```
+|-- CaseVal001_image.nii.gz
+|-- CaseVal002_image.nii.gz
+|-- CaseVal003_image.nii.gz
+|-- ...
+```
+
+### Test data (90 Cases)
 
 <div style="display: flex;">
 <table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
@@ -191,11 +191,6 @@ Siemens Avanto 1.5T, Toshiba Aquilion ONE CT scanner.
       <td>MRI</td>
     </tr>
     <tr>
-      <td>G</td>
-      <td>20</td>
-      <td>CT</td>
-    </tr>
-    <tr>
       <td>H</td>
       <td>20</td>
       <td>CT</td>
@@ -204,24 +199,65 @@ Siemens Avanto 1.5T, Toshiba Aquilion ONE CT scanner.
 </table>
 </div>
 
+```
+|-- CaseTest001_image.nii.gz
+|-- CaseTest002_image.nii.gz
+|-- CaseTest003_image.nii.gz
+|-- ...
+```
 
-## Metrics
-The performance of segmentation results will be assessed through: 
-- **Dice Similarity Coefficient (Dice)**
-- **Hausdorff Distance (HD in mm)**
-- **Average Surface Distance (ASD in mm)**
-
+**Note on Validation and Test datasets**: We have randomly shuffled the data from different centers and anonymized the center information to enhance fairness.
 
 ## Rules
 - **Only automatic methods are acceptable.** In this track, participants must utilize algorithms that do not require manual intervention or human-assisted processes for the segmentation task.
 - **Pre-trained models are allowed.** In this track, the solutions could be developed with open pre-trained fundation models, such as SAM, CLIP and MedSAM.
 - **Publicly available data is allowed.** In this track, participants may also include publicly available data. Such additional data needs to be publicly available **before** the date of the test results submission (July 10, 2026). Private annotations of such data is prohibited.
 
-
-
 ## Registration
-The registration website is under construction. We will release it before March 13, 2026.
-<!-- To access the dataset, please register [here](http://zmic.org.cn/care_2025/eval/register?track=whs). -->
+To access the dataset, please register [here](http://zmic.org.cn/care_2026/eval/register?track=wholeheart).
+
+## Metrics
+The performance of segmentation results will be assessed through: 
+- **Dice Similarity Coefficient (DSC)**: DSC is well-suited for assessing the overlap or agreement between the predicted segmentation and the ground truth, making it particularly useful when the regions of interest in medical images may partially overlap.
+- **Hausdorff Distance (HD in mm)**: HD measures the maximum distance between two sets, indicating the degree of boundary mismatch.
+
+- We will provide multiple leaderboards, representing stratified performance across different modalities. In each leaderboard, in addition to DSC and HD of 7 cardiac substructures, we will also report DSC and HD of whole heart segmentation (WHS), which are weighted average (according to their volumes) from 7 substructures. 
+
+## Award Policy
+
+This track will give **2** best performance awards according to performances across **CT** images and **MRI** images, refered to as **WHS-CT** and **WHS-MRI**, respectively. 
+
+- In ranking, we first compute the average DSC and average HD of **WHS** across all cases of test data. After that, the final score for one team is computed as the sum of team’s ranks in the DSC and HD rankings.
+- The team that has **lowest** the final score will get the best performance award
+- **Ties are permitted when teams achieve identical scores.**
+
+
+We will rank participant methods based on the settings (​Lb1–Lb4) detailed in the following table:
+
+<!-- <div style="display: flex;">
+<table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
+<caption style="caption-side: top; text-align: left; font-weight: bold; padding-bottom: 10px;width: 100%;"> Leaderboard (Lb) for CARE-Whole Heart track across modalities and evaluation settings.​​ Lb1–Lb4 represent performance from different test centers and modalities (e.g., Lb1 = CT segmentation peformance on center A and B). In-distribution refers to centers included in the training data, while out-of-distribution refers to unseen centers not used during training.</caption>
+  <thead>
+    <tr>
+      <th style="text-align:center;">Modality</th>
+      <th style="text-align:center;">In-distribution</th>
+      <th style="text-align:center;">Out-of-distribution</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>CT</td>
+      <td>Lb1</td>
+      <td>Lb2</td>
+    </tr>
+    <tr>
+      <td>MR</td>
+      <td>Lb3</td>
+      <td>Lb4</td>
+    </tr>
+  </tbody>
+</table>
+</div>-->
 
 
 ## Leaderboards
