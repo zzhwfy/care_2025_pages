@@ -30,7 +30,7 @@ nav_order: 6
     </tr>
     <tr>
       <td>Best Performance Award</td>
-      <td>7</td>
+      <td>8</td>
       <td>Certificate</td>
     </tr>
   </tbody>
@@ -39,6 +39,7 @@ nav_order: 6
 
 ---
 
+<!--
 ### Best Paper Award
 <div class="paper-title-block" style="text-align:center;">
   <p style="margin:0; font-weight:bold;">A Unified 3D Cardiac Structure Segmentation Framework for Heterogeneous Medical Data</p>
@@ -116,4 +117,6 @@ nav_order: 6
   </tbody>
 </table>
 </div>
+!-->
+
 
