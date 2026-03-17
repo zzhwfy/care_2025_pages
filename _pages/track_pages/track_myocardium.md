@@ -28,17 +28,19 @@ _styles: >
 ---
 
 ## Motivation
-{% include figure.liquid loading="eager" path="/assets/img/myops.png" class="img-fluid" max-width="70%" zoomable=true caption="Figure 1. Myocardial pathology segmentation and its challenges. (A) Myocardial Pathology Segmentation: Scar and edema regions are marked in green and yellow, respectively. (B) Challenges of Myocardial Pathology Segmentation: The challenges include multi-center data, missing sequences, and misalignments in multi-sequence CMR images." %}
+{% include figure.liquid loading="eager" path="/assets/img/myocardium.png" class="img-fluid" max-width="70%" zoomable=true caption="Figure 1. Myocardial pathology segmentation and its challenges. (A) Myocardial Pathology Segmentation: Scar and edema regions are marked in green and yellow, respectively. (B) Cine MyoPS: Scar regions are marked in pink. (C) Challenges of Myocardial Pathology Segmentation: The challenges include multi-center data, missing sequences, and misalignments in multi-sequence CMR images." %}
 
-Myocardial infarction (MI) is a major cause of mortality and disability worldwide. Assessment of myocardial viability is essential in the diagnosis and treatment management of MI patients <d-cite key="myops1"></d-cite>. Multi-sequence cardiac magnetic resonance (MS-CMR) images can provide valuable myocardial pathology information, which is important for the diagnosis and treatment management of patients. As shown in Figure 1 (A), balanced steady-state free precession (bSSFP) cine sequences present clear anatomical boundaries, while late gadolinium enhancement (LGE) and T2-weighted (T2) CMR sequences visualize myocardial scar and edema of MI, respectively.
+Myocardial infarction (MI) is a leading cause of mortality and disability worldwide. Accurate assessment of myocardial viability is essential for the diagnosis and clinical management of MI patients<d-cite key="myops1"></d-cite>. Multi-sequence cardiac magnetic resonance (MS-CMR) imaging provides comprehensive insights into myocardial pathology, playing a pivotal role in tailored patient care. As shown in Figure 1 (A), balanced steady-state free precession (bSSFP) cine sequences clearly delineate anatomical boundaries, while late gadolinium enhancement (LGE) and T2-weighted (T2) CMR sequences visualize myocardial scars and edema, respectively.
+
+Despite the high efficacy of LGE in visualizing myocardial scars, its acquisition can be time-consuming and sometimes clinically prohibitive due to the required administration of contrast agents. This highlights an urgent need for contrast-free alternatives. Cine CMR emerges as a rapid, contrast-free imaging technique capable of capturing myocardial dynamics. As shown in Figure 1 (B), non-viable myocardial regions (scars) exhibit distinct abnormalities in cardiac motion and wall thickness compared to viable tissue. Leveraging these functional differences, Cine CMR presents a promising yet highly challenging alternative for direct myocardial pathology segmentation.
 
 ## Tasks
 
-The target of this track is to segment myocardial pathology regions, specifically scar and edema, from multi-sequence CMR data. This track seeks innovative solutions to address MyoPS using real-world multi-sequence CMR data. We encourage participants to overcome challenges such as the inclusion of multi-center data, missing sequences for some centers <d-cite key="myops2"></d-cite>, and misalignments in multi-sequence CMRs <d-cite key="myops3"></d-cite>, as illustrated in Figure 1 (B).
+The primary objective of this track is to accurately segment myocardial pathology regions (specifically, scars and edema) from CMR sequences. This track seeks innovative solutions to address two distinct subtasks: **MyoPS**, which focuses on segmenting scars and edema using MS-CMR data, and **CineMyoPS**, which focuses on segmenting scars using solely cine CMR data. We encourage participants to develop robust algorithms capable of overcoming significant real-world challenges, including multi-center data variations, missing sequences in certain centers<d-cite key="myops2"></d-cite>, and spatial misalignments across multi-sequence CMRs<d-cite key="myops3"></d-cite>, as illustrated in Figure 1 (C).
 
 ### Subtasks
-- MyoPS Subtask: LGE, T2 and 3D bSSFP sequences.
-- Cine MyoPS Subtask: LGE, T2 and 4D bSSFP sequences. The temporal dimension of the cine sequence is provided for contextual information. The segmentation target is the myocardial pathology at the first frame of the cine sequence. 
+- MyoPS Subtask: LGE, T2 and bSSFP sequences.
+- CineMyoPS Subtask: Cine sequence. The temporal dimension of the cine sequence is provided for contextual information. The segmentation target is the myocardial pathology at the first frame of the cine sequence. 
 
 The specific  substructures, each associated with a unique label value, are:
 1. **Scar** - Label value: 2221
@@ -48,17 +50,16 @@ The specific  substructures, each associated with a unique label value, are:
 5. **Right ventricle** - Label value: 600
 
 
-We will rank participant methods based on the settings (​Lb1–Lb4) detailed in the following table:
+We will rank participant methods based on the settings (​Lb1–Lb3) detailed in the following table:
 
 <div style="display: flex;">
 <table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
-<caption style="caption-side: top; text-align: left; font-weight: bold; padding-bottom: 10px;"> Leaderboard (Lb) for MyoPS track across targets and evaluation settings.​​ Lb1–Lb6 represent performance from different test centers and targets (e.g., Lb1 = scar segmentation peformance on center B). In-distribution refers to centers included in the training data, while out-of-distribution refers to unseen centers not used during training.</caption>
+<caption style="caption-side: top; text-align: left; font-weight: bold; padding-bottom: 10px;"> Leaderboard (Lb) for Myocardium track across targets and evaluation settings.​​ Lb1–Lb3 represent performance from different subtasks and targets (e.g., Lb1 = Scar segmentation peformance on MyoPS centers). </caption>
   <thead>
     <tr>
       <th style="text-align:center;">Subtask</th>
       <th style="text-align:center;">Target</th>
-      <th style="text-align:center;">In-distribution</th>
-      <th style="text-align:center;">Out-of-distribution</th>
+      <th style="text-align:center;">Leaderboard</th>
     </tr>
   </thead>
   <tbody>
@@ -66,25 +67,22 @@ We will rank participant methods based on the settings (​Lb1–Lb4) detailed i
       <td>MyoPS</td>
       <td>Scar</td>
       <td>Lb1</td>
-      <td>Lb2</td>
     </tr>
     <tr>
       <td>MyoPS</td>
       <td>Edema</td>
-      <td>Lb3</td>
-      <td>Lb4</td>
+      <td>Lb2</td>
     </tr>
     <tr>
       <td>CineMyoPS</td>
       <td>Scar</td>
-      <td>Lb5</td>
-      <td>Lb6</td>
+      <td>Lb3</td>
     </tr>
   </tbody>
 </table>
 </div>
 
-Leaderboards are maintained separately for the 3D Cine and 4D Cine subtasks.
+
 
 
 
@@ -111,7 +109,7 @@ Leaderboards are maintained separately for the 3D Cine and 4D Cine subtasks.
     </tr>
     <tr>
       <td>B</td>
-      <td>50</td>
+      <td>35</td>
       <td>LGE, T2 and bSSFP</td>
       <td>Scar, edema, left ventricle,  myocardium and right ventricle</td>
     </tr>
@@ -163,10 +161,10 @@ Leaderboards are maintained separately for the 3D Cine and 4D Cine subtasks.
   </thead>
   <tbody>
     <tr>
-      <td>D</td>
-      <td>25</td>
+      <td>(Anonymous)</td>
+      <td>15</td>
       <td>LGE, T2 and bSSFP</td>
-      <td>Scar, edema, left ventricle,  myocardium</td>
+      <td>Scar, edema, left ventricle,  myocardium and right ventricle</td>
     </tr>
 
   </tbody>
@@ -187,14 +185,8 @@ Leaderboards are maintained separately for the 3D Cine and 4D Cine subtasks.
   </thead>
   <tbody>
     <tr>
-      <td>D</td>
-      <td>25</td>
-      <td>LGE, T2 and bSSFP</td>
-      <td>Scar, edema, left ventricle,  myocardium and right ventricle</td>
-    </tr>
-    <tr>
-      <td>B</td>
-      <td>15</td>
+      <td>(Anonymous)</td>
+      <td>65</td>
       <td>LGE, T2 and bSSFP</td>
       <td>Scar, edema, left ventricle,  myocardium and right ventricle</td>
     </tr>
@@ -216,10 +208,16 @@ Leaderboards are maintained separately for the 3D Cine and 4D Cine subtasks.
   </thead>
   <tbody>
     <tr>
-      <td>β</td>
-      <td>25</td>
-      <td>bSSFP</td>
-      <td>Scar, edema, left ventricle,  myocardium and right ventricle</td>
+      <td>α </td>
+      <td>40</td>
+      <td>Cine</td>
+      <td>Scar, left ventricle and  myocardium </td>
+    </tr>
+        <tr>
+      <td>β </td>
+      <td>24</td>
+      <td>Cine</td>
+      <td>Scar, left ventricle and  myocardium </td>
     </tr>
 
 
@@ -243,12 +241,11 @@ Leaderboards are maintained separately for the 3D Cine and 4D Cine subtasks.
   </thead>
   <tbody>
     <tr>
-      <td>β</td>
-      <td>5</td>
-      <td>bSSFP</td>
-      <td>Scar, edema, left ventricle,  myocardium and right ventricle</td>
+      <td>(Anonymous)</td>
+      <td>15</td>
+      <td>Cine</td>
+      <td>Scar, left ventricle and  myocardium</td>
     </tr>
-
   </tbody>
 </table>
 </div>
@@ -267,22 +264,10 @@ Leaderboards are maintained separately for the 3D Cine and 4D Cine subtasks.
   </thead>
   <tbody>
     <tr>
-      <td>α</td>
-      <td>25</td>
-      <td>bSSFP</td>
-      <td>Scar, edema, left ventricle,  myocardium and right ventricle</td>
-    </tr>
-    <tr>
-      <td>β</td>
-      <td>14</td>
-      <td>bSSFP</td>
-      <td>Scar, edema, left ventricle,  myocardium and right ventricle</td>
-    </tr>
-        <tr>
-      <td>γ</td>
-      <td>120</td>
-      <td>bSSFP</td>
-      <td>Scar, left ventricle,  myocardium</td>
+      <td>(Anonymous)</td>
+      <td>45</td>
+      <td>Cine</td>
+      <td>Scar, left ventricle and myocardium</td>
     </tr>
   </tbody>
 </table>
@@ -333,6 +318,13 @@ To access the dataset, please register [here](http://zmic.org.cn/care_2025/eval/
   author={Ding, Wangbin and Li, Lei and Qiu, Junyi and Wang, Sihan and Huang, Liqin and Chen, Yinyin and Yang, Shan and Zhuang, Xiahai},
   journal={IEEE Transactions on Medical Imaging},
   year={2023},
+}
+
+@article{ding2025cinemyops,
+  title={CineMyoPS: Segmenting Myocardial Pathologies from Cine Cardiac MR},
+  author={Ding, Wangbin and Li, Lei and Qiu, Junyi and Lin, Bogen and Yang, Mingjing and Huang, Liqin and Wu, Lianming and Wang, Sihan and Zhuang, Xiahai},
+  journal={IEEE Transactions on Medical Imaging},
+  year={2025},
 }
 ```
 
