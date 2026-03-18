@@ -128,7 +128,7 @@ The performance of LA cavity segmentation, LA scar quantification and cardiac st
 - **Average Surface Distance (ASD)**
 - **Hausdorff Distance (HD)**
 
-**Task 3**:S
+**Task 3**:
 - **Dice Similarity Coefficient (DSC)**
 - **Average Surface Distance (ASD)**
 - **Hausdorff Distance (HD)**
@@ -195,7 +195,4 @@ Leaderboards will be released after test results submission.
 
 ## Contact
 If you have any questions regarding the CARE-Whole Heart track, please feel free to contact:
-
-Prof Xiahai Zhuang: [zxh@fudan.edu.cn](mailto:zxh@fudan.edu.cn)
-Prof Liqin Huang: [hlq@fzu.edu.cn](mailto:hlq@fzu.edu.cn)
-Xingtao Lin: [231110040@fzu.edu.cn](mailto:231110040@fzu.edu.cn)
+care26challenge@163.com or care26challenge@outlook.com.
