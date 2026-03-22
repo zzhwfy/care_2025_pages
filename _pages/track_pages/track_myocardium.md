@@ -7,7 +7,7 @@ bibliography: reference.bib
 toc:
   - name: Motivation
   - name: Tasks
-  - name: Data 
+  - name: Data details
   - name: Metrics
   - name: Rules
   - name: Registration
@@ -28,19 +28,18 @@ _styles: >
 ---
 
 ## Motivation
-{% include figure.liquid loading="eager" path="/assets/img/myocardium.png" class="img-fluid" max-width="70%" zoomable=true caption="Figure 1. Myocardial pathology segmentation and its challenges. (A) Myocardial Pathology Segmentation: Scar and edema regions are marked in green and yellow, respectively. (B) Cine MyoPS: Scar regions are marked in pink. (C) Challenges of Myocardial Pathology Segmentation: The challenges include multi-center data, missing sequences, and misalignments in multi-sequence CMR images." %}
+{% include figure.liquid loading="eager" path="/assets/img/myocardium.png" class="img-fluid" max-width="70%" zoomable=true caption="Figure 1. Myocardial pathology segmentation and its challenges. (A) Myocardial Pathology Segmentation: Scar and edema regions are marked in green and yellow, respectively. (B) Cine MyoPS: Scar regions are marked in blue. (C) Challenges of Myocardial Pathology Segmentation: The challenges include multi-center data, missing sequences, and misalignments in multi-sequence CMR images." %}
 
 Myocardial infarction (MI) is a leading cause of mortality and disability worldwide. Accurate assessment of myocardial viability is essential for the diagnosis and clinical management of MI patients<d-cite key="myops1"></d-cite>. Multi-sequence cardiac magnetic resonance (MS-CMR) imaging provides comprehensive insights into myocardial pathology, playing a pivotal role in tailored patient care. As shown in Figure 1 (A), balanced steady-state free precession (bSSFP) cine sequences clearly delineate anatomical boundaries, while late gadolinium enhancement (LGE) and T2-weighted (T2) CMR sequences visualize myocardial scars and edema, respectively.
 
-Despite the high efficacy of LGE in visualizing myocardial scars, its acquisition can be time-consuming and sometimes clinically prohibitive due to the required administration of contrast agents. This highlights an urgent need for contrast-free alternatives. Cine CMR emerges as a rapid, contrast-free imaging technique capable of capturing myocardial dynamics. As shown in Figure 1 (B), non-viable myocardial regions (scars) exhibit distinct abnormalities in cardiac motion and wall thickness compared to viable tissue. Leveraging these functional differences, Cine CMR presents a promising yet highly challenging alternative for direct myocardial pathology segmentation.
+Despite the high efficacy of LGE in visualizing myocardial scars, its acquisition can be time-consuming and sometimes clinically prohibitive due to the required administration of contrast agents, which highlights an urgent need for contrast-free alternatives. Cine CMR emerges as a rapid, contrast-free imaging technique capable of capturing myocardial dynamics. As shown in Figure 1 (B), non-viable myocardial regions (scars) exhibit distinct abnormalities in cardiac motion and wall thickness compared to viable tissue. Leveraging these functional differences, cine CMR presents a promising yet highly challenging alternative for direct myocardial pathology segmentation<d-cite key="myops4"></d-cite>.
 
 ## Tasks
 
 The primary objective of this track is to accurately segment myocardial pathology regions (specifically, scars and edema) from CMR sequences. This track seeks innovative solutions to address two distinct subtasks: **MyoPS**, which focuses on segmenting scars and edema using MS-CMR data, and **CineMyoPS**, which focuses on segmenting scars using solely cine CMR data. We encourage participants to develop robust algorithms capable of overcoming significant real-world challenges, including multi-center data variations, missing sequences in certain centers<d-cite key="myops2"></d-cite>, and spatial misalignments across multi-sequence CMRs<d-cite key="myops3"></d-cite>, as illustrated in Figure 1 (C).
 
-### Subtasks
-- MyoPS Subtask: LGE, T2 and bSSFP sequences.
-- CineMyoPS Subtask: Cine sequence. The temporal dimension of the cine sequence is provided for contextual information. The segmentation target is the myocardial pathology at the first frame of the cine sequence. 
+- MyoPS data: LGE, T2 and bSSFP sequences. The segmentation target is scars and edema at the LGE and T2 sequences, respectively. 
+- CineMyoPS data: cine sequence. The segmentation target is scars at the end-diastolic frame of the cine sequence. 
 
 The specific  substructures, each associated with a unique label value, are:
 1. **Scar** - Label value: 2221
@@ -54,7 +53,7 @@ We will rank participant methods based on the settings (​Lb1–Lb3) detailed i
 
 <div style="display: flex;">
 <table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
-<caption style="caption-side: top; text-align: left; font-weight: bold; padding-bottom: 10px;"> Leaderboard (Lb) for Myocardium track across targets and evaluation settings.​​ Lb1–Lb3 represent performance from different subtasks and targets (e.g., Lb1 = Scar segmentation peformance on MyoPS centers). </caption>
+<caption style="caption-side: top; text-align: left; font-weight: bold; padding-bottom: 10px;"> Leaderboard (Lb) for Myocardium track across targets and evaluation settings.​​ Lb1–Lb3 represent performance from different subtasks and targets (e.g., Lb1 = Scar segmentation peformance on the MyoPS subtask). </caption>
   <thead>
     <tr>
       <th style="text-align:center;">Subtask</th>
@@ -86,9 +85,9 @@ We will rank participant methods based on the settings (​Lb1–Lb3) detailed i
 
 
 
-## Data
+## Data details
 
-### Training data – MyoPS Subtask
+### Training data – MyoPS 
 
 <div style="display: flex; ">
 <table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
@@ -147,7 +146,7 @@ We will rank participant methods based on the settings (​Lb1–Lb3) detailed i
 </table>
 </div>
 
-### Validation data – MyoPS Subtask
+### Validation data – MyoPS 
 
 <div style="display: flex;">
 <table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
@@ -171,7 +170,7 @@ We will rank participant methods based on the settings (​Lb1–Lb3) detailed i
 </table>
 </div>
 
-### Test data – MyoPS Subtask
+### Test data – MyoPS 
 
 <div style="display: flex;">
 <table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
@@ -194,7 +193,7 @@ We will rank participant methods based on the settings (​Lb1–Lb3) detailed i
 </table>
 </div>
 
-### Training data – Cine MyoPS Subtask
+### Training data – CineMyoPS 
 
 <div style="display: flex; ">
 <table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
@@ -227,7 +226,7 @@ We will rank participant methods based on the settings (​Lb1–Lb3) detailed i
 </table>
 </div>
 
-### Validation data – Cine MyoPS Subtask
+### Validation data – CineMyoPS 
 
 <div style="display: flex;">
 <table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
@@ -250,7 +249,7 @@ We will rank participant methods based on the settings (​Lb1–Lb3) detailed i
 </table>
 </div>
 
-### Test data – Cine MyoPS Subtask
+### Test data – CineMyoPS 
 
 <div style="display: flex;">
 <table class="table table-sm table-hover border-bottom" style="table-layout:fixed;width:85%;align:center;">
