@@ -93,17 +93,17 @@ This data was original collected from Fuzhou University Affiliated Provincial Ho
 
 The dataset has been divided into three main parts: training, validation, and test sets:
 
-*Task 1*:
+*LA cavity segmentation*:
 - **Training Set**: 60 LGE MRIs from Center A and 150 CTs from Center D
 - **Validation Set**: 10 LGE MRIs from Center A and 20 CTs from Center D
 - **Test Set**: 24 LGE MRIs from Center A and 130 CTs from Center D
   
-*Task 2*:
+*LA scar quantification*:
 - **Training Set**: 130 LGE MRIs from Centers A 
 - **Validation Set**: 10 LGE MRIs from Center A and 10 LGE MRIs from Center C 
 - **Test Set**: 14 LGE MRIs from Center A, 20 LGE MRIs from Center B and 10 LGE MRIs from Center C  <!-- , 40 LGE MRIs from Center 2.2-->
 
-*Task 3*:
+*cardiac structure segmentation*:
 - **Training Set**: 150 CTs from Center D
 - **Validation Set**: 20 CTs from Center D
 - **Test Set**: 130 CTs from Center D 
@@ -125,17 +125,17 @@ The submitted format of the prediction for the participants could be named as fo
 
 The performance of LA cavity segmentation, LA scar quantification and cardiac structure segmentation results will be evaluated by：
 
-**Task 1**:
+**LA cavity segmentation**:
 - **Generalized Dice Similarity Coefficient (G-DSC)** <d-cite key="lascarqs6">
 - **Accuracy (ACC)**
 - **Sensitivity (SEN)**
 
-**Task 2**:
+**LA scar quantification**:
 - **Dice Similarity Coefficient (DSC)**
 - **Average Surface Distance (ASD)**
 - **Hausdorff Distance (HD)**
 
-**Task 3**:
+**cardiac structure segmentation**:
 - **Dice Similarity Coefficient (DSC)**
 - **Average Surface Distance (ASD)**
 - **Hausdorff Distance (HD)**
