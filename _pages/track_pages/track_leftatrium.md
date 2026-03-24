@@ -202,4 +202,4 @@ Leaderboards will be released after test results submission.
 
 ## Contact
 If you have any questions regarding the CARE-Whole Heart track, please feel free to contact:
-care26challenge@163.com or care26challenge@outlook.com.
+[care26challenge@163.com](mailto:care26challenge@163.com) or [care2026challenge@outlook.com](mailto:care2026challenge@outlook.com).

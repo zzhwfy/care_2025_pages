@@ -28,7 +28,7 @@ This challenge consists of **4** challenging tracks and encompasses imaging data
 
 After registration, we will assign participants an account to login into our evaluation platform. Participants can directly upload your predictions and docker via the website. For paper submission, please refer to our [paper submission guidance](/care_2026/paper_submission).
 
-**Contact**: If you have any questions, please feel free to contact: [care26challenge@163.com](mailto:care26challenge@163.com) or [care26challenge@outlook.com](mailto:care26challenge@outlook.com).
+**Contact**: If you have any questions, please feel free to contact: [care26challenge@163.com](mailto:care26challenge@163.com) or [care2026challenge@outlook.com](mailto:care2026challenge@outlook.com).
 
 <!--
 ## Post-Challenge Data Request
