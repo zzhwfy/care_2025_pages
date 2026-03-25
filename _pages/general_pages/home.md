@@ -14,13 +14,13 @@ Medical image analysis empowered by AI has significantly reshaped medicine. Howe
 
 This challenge consists of **4** challenging tracks and encompasses imaging data from over **2000 patients** collected across **three continents**, capturing diverse acquisition protocols, clinical centers, and patient populations. Participants can explore each track below to access the corresponding datasets and detailed task descriptions.
 
-[**<u>CARE-Left Atrium</u>**](/care_2026/track_leftatrium): Left Atrial Segmentation and Analysis [(register here!)](http://zmic.org.cn/care_2026/eval/register?track=leftatrium).
+[**<u>CARE-Left Atrium</u>**](/care_2026/track_leftatrium): Left Atrial Segmentation and Analysis [**(register here!)**](http://zmic.org.cn/care_2026/eval/register?track=leftatrium).
 
-[**<u>CARE-Liver</u>**](/care_2026/track_liver): Liver Segmentation and Fibrosis Staging [(register here!)](http://zmic.org.cn/care_2026/eval/register?track=liver).
+[**<u>CARE-Liver</u>**](/care_2026/track_liver): Liver Segmentation and Fibrosis Staging [**(register here!)**](http://zmic.org.cn/care_2026/eval/register?track=liver).
 
-[**<u>CARE-Myocardium</u>**](/care_2026/track_myocardium): Myocardial Pathology Segmentation [(register here!)](http://zmic.org.cn/care_2026/eval/register?track=myocardium).
+[**<u>CARE-Myocardium</u>**](/care_2026/track_myocardium): Myocardial Pathology Segmentation [**(register here!)**](http://zmic.org.cn/care_2026/eval/register?track=myocardium).
 
-[**<u>CARE-Whole Heart</u>**](/care_2026/track_wholeheart): Whole Heart Segmentation [(register here!)](http://zmic.org.cn/care_2026/eval/register?track=wholeheart).
+[**<u>CARE-Whole Heart</u>**](/care_2026/track_wholeheart): Whole Heart Segmentation [**(register here!)**](http://zmic.org.cn/care_2026/eval/register?track=wholeheart).
 
 
 
@@ -44,11 +44,11 @@ The schedule for this track is as follows. All deadlines (DDLs) are on 23:59 in 
 <table class="table table-sm table-hover border-bottom">
     <tr>
     <td class="text-left"><strong>Registration Period</strong></td>
-    <th scope="row" style="width: 60%" class="text-right"><strong>March 20, 2026 - July 20, 2026</strong></th>
+    <th scope="row" style="width: 60%" class="text-right"><strong>March 27, 2026 - July 20, 2026</strong></th>
     </tr>
     <tr>
     <td class="text-left"><strong>Training Data Release</strong></td>
-    <th scope="row" style="width: 60%" class="text-right"><strong>March 20, 2026</strong></th>
+    <th scope="row" style="width: 60%" class="text-right"><strong>March 27, 2026</strong></th>
     </tr>
     <tr>
     <td class="text-left"><strong>Validation Phase start</strong></td>

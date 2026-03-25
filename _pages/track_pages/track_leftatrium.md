@@ -93,17 +93,17 @@ This data was original collected from Fuzhou University Affiliated Provincial Ho
 
 The dataset has been divided into three main parts: training, validation, and test sets:
 
-*LA cavity segmentation*:
-- **Training Set**: 60 LGE MRIs from Center A and 150 CTs from Center D
-- **Validation Set**: 10 LGE MRIs from Center A and 20 CTs from Center D
-- **Test Set**: 24 LGE MRIs from Center A and 130 CTs from Center D
+**LA scar quantification (MRI)**::
+- **Training Set**: 60 LGE MRIs from Center A
+- **Validation Set**: 10 LGE MRIs from Center A
+- **Test Set**: 24 LGE MRIs from Center A
   
-*LA scar quantification*:
+**LA cavity segmentation (MRI)**:
 - **Training Set**: 130 LGE MRIs from Centers A 
 - **Validation Set**: 10 LGE MRIs from Center A and 10 LGE MRIs from Center C 
 - **Test Set**: 14 LGE MRIs from Center A, 20 LGE MRIs from Center B and 10 LGE MRIs from Center C  <!-- , 40 LGE MRIs from Center 2.2-->
 
-*cardiac structure segmentation*:
+**Cardiac anatomy segmentation (CT)**:
 - **Training Set**: 150 CTs from Center D
 - **Validation Set**: 20 CTs from Center D
 - **Test Set**: 130 CTs from Center D 
@@ -125,21 +125,18 @@ The submitted format of the prediction for the participants could be named as fo
 
 The performance of LA cavity segmentation, LA scar quantification and cardiac structure segmentation results will be evaluated by：
 
-**LA cavity segmentation**:
+**LA scar quantification (MRI)**:
 - **Generalized Dice Similarity Coefficient (G-DSC)** <d-cite key="lascarqs6">
 - **Accuracy (ACC)**
 - **Sensitivity (SEN)**
 
-**LA scar quantification**:
+**LA cavity segmentation (MRI)**:
 - **Dice Similarity Coefficient (DSC)**
-- **Average Surface Distance (ASD)**
 - **Hausdorff Distance (HD)**
 
-**cardiac structure segmentation**:
+**Cardiac anatomy segmentation (CT)**:
 - **Dice Similarity Coefficient (DSC)**
-- **Average Surface Distance (ASD)**
 - **Hausdorff Distance (HD)**
-- **Jaccard similarity coefficient(Jaccard)**
 
 ## Rules
 1. External data sets and pre-trained models are NOT allowed in this track.
@@ -148,8 +145,7 @@ The performance of LA cavity segmentation, LA scar quantification and cardiac st
 
 
 ## Registration
-The registration website is under construction. We will release it before March 13, 2026.
-<!--To access the dataset, please register [here](http://zmic.org.cn/care_2025/eval/register?track=cardiac).-->
+To access the dataset, please register [here](http://zmic.org.cn/care_2026/eval/register?track=leftatrium).
 
 ## Leaderboards
 Leaderboards will be released after test results submission.
