@@ -64,19 +64,19 @@ We include 200+ multi-center LGE MRIs and 300 CTs (enhanced.nii.gz) from differe
 All these clinical data have got institutional ethic approval and have been anonymized (please follow the data usage agreement, i.e., CC BY NC ND).
 The details of these LGE MRI are listed below:
 
-*Center A*: 154 LGE MRIs
+**Center A**: 154 LGE MRIs
 
 This data was original collected from Utah [NAMIC-CARMA](https://www.insight-journal.org/midas/collection/view/197) with permission for release. [2018 Atrial Segmentation Challenge](https://atriaseg2018.cardiacatlas.org/) refined the LA segmentation of Utah NAMIC-CARMA dataset before final release.  Therefore, we adopted the refine dataset, and further fixed the resolution irregularities existing in this dataset. The clinical images were acquired with Siemens Avanto 1.5T or Vario 3T using free-breathing (FB) with navigator-gating.  The spatial resolution of the 3D LGE MRI scan was 0.625 × 0.625 × 2.5 mm.  The patient underwent an MR examination prior to ablation or was 3-6 months after ablation.
 
-*Center B*: 20 LGE MRIs
+**Center B**: 20 LGE MRIs
 
 This data was original collected from Beth Israel Deaconess Medical Center and was used in [ISBI2012 Left Atrium Fibrosis and Scar Segmentation Challenge](https://www.cardiacatlas.org/challenges/left-atrium-fibrosis-and-scar-segmentation-challenge/). We selected part of the dataset from this challenge and refine their manual segmentation before release. The clinical images were acquired with Philips Acheiva 1.5T using FB and navigator-gating with fat suppression. The spatial resolution of one 3D LGE MRI scan was 1.4 × 1.4 × 1.4 mm. The patient underwent an MR examination prior to ablation or was 1 month after ablation.
 
-*Center C*: 20 LGE MRIs
+**Center C**: 20 LGE MRIs
 
 This data was original collected from King’s College London and was used in [ISBI2012 Left Atrium Fibrosis and Scar Segmentation Challenge](https://www.cardiacatlas.org/challenges/left-atrium-fibrosis-and-scar-segmentation-challenge/). We selected part of the dataset from this challenge and refine their manual segmentation before release. The clinical images were also acquired with Philips Acheiva 1.5T using FB and navigator-gating with fat suppression. The spatial resolution of one 3D LGE MRI scan was 1.3 × 1.3 × 4.0 mm. The patient underwent an MR examination prior to ablation or was 3-6 months after ablation.
 
-*Center D*: 300 CTs
+**Center D**: 300 CTs
 
 This data was original collected from Fuzhou University Affiliated Provincial Hospital. We selected part of the dataset from this challenge and refine their manual segmentation before release.The clinical CT images were acquired with Siemens Force. The data were acquired at a resolution various from (0.30 x 0.30 x 0.5) to (0.80 x 0.80 x 0.5) mm.
 
@@ -93,17 +93,17 @@ This data was original collected from Fuzhou University Affiliated Provincial Ho
 
 The dataset has been divided into three main parts: training, validation, and test sets:
 
-**LA scar quantification (MRI)**::
-- **Training Set**: 60 LGE MRIs from Center A
-- **Validation Set**: 10 LGE MRIs from Center A
-- **Test Set**: 24 LGE MRIs from Center A
+**LA scar quantification (MRI)**:
+- **Training Set**: 60 LGE MRIs from Center A 
+- **Validation Set**: 10 LGE MRIs from Center A 
+- **Test Set**: 24 LGE MRIs from Center A 
   
 **LA cavity segmentation (MRI)**:
 - **Training Set**: 130 LGE MRIs from Centers A 
 - **Validation Set**: 10 LGE MRIs from Center A and 10 LGE MRIs from Center C 
 - **Test Set**: 14 LGE MRIs from Center A, 20 LGE MRIs from Center B and 10 LGE MRIs from Center C  <!-- , 40 LGE MRIs from Center 2.2-->
 
-**Cardiac anatomy segmentation (CT)**:
+**cardiac anatomy segmentation (CT)**:
 - **Training Set**: 150 CTs from Center D
 - **Validation Set**: 20 CTs from Center D
 - **Test Set**: 130 CTs from Center D 
@@ -134,14 +134,15 @@ The performance of LA cavity segmentation, LA scar quantification and cardiac st
 - **Dice Similarity Coefficient (DSC)**
 - **Hausdorff Distance (HD)**
 
-**Cardiac anatomy segmentation (CT)**:
+**cardiac anatomy segmentation (CT)**:
 - **Dice Similarity Coefficient (DSC)**
 - **Hausdorff Distance (HD)**
 
 ## Rules
 1. External data sets and pre-trained models are NOT allowed in this track.
 2. Only automatic methods are permitted.
-3. Participants are encouraged to attempt both tasks, but they also can choose to focus on either task 1 or task 2. 
+3. Participants are encouraged to attempt all tasks, but they also can choose to focus on one of them. 
+4. We will only award prizes for LA scar quantification (MRI) and cardiac anatomy segmentation (CT).
 
 
 ## Registration

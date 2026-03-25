@@ -90,20 +90,20 @@ The schedule for this track is as follows. All deadlines (DDLs) are on 23:59 in 
 The challenge has **1** best paper and **2** runner-ups. In addition, CARE 2026 will provide **8** best performance awards as follows:
 
 **CARE-Left Atrium**: 
-- LA scar quantification from MRI (LASQ-MRI) 
-- LA multi-structure segmentation from CT (LAMS-CT)
+- LA scar quantification (MRI) 
+- Cardiac anatomy segmentation (CT)
 
 **CARE-Liver**: 
 - Liver Fibrosis Staging (LiFS)
 - Liver Segmentation (LiSeg)
 
 **CARE-Myocardium**: 
-- MyoPS
-- Cine MyoPS
+- Myocardial Pathology Segmentation
+- Cine Myocardial Pathology Segmentation
 
 **CARE-Whole Heart**: 
-- WHS-CT
-- WHS-MRI
+- Whole heart segmentation (CT)
+- Whole heart segmentation (MRI)
 
 ## Sponsors
 - **[<u>MICCAI-SIG Cardiac Imaging, Computational Modelling and Clinical Sciences (SIG-Cardiac)</u>](https://miccai.org/index.php/special-interest-groups/sig-cardiac/)**

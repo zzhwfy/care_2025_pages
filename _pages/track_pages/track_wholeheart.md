@@ -236,7 +236,7 @@ The performance of segmentation results will be assessed through:
 
 ## Award Policy
 
-This track will give **2** best performance awards according to performances across **CT** images and **MRI** images, refered to as **WHS-CT** and **WHS-MRI**, respectively. 
+This track will give **2** best performance awards according to performances across **CT** images and **MRI** images, refered to as **Whole heart segmentation (CT)** and **Whole heart segmentation (MRI)**, respectively. 
 
 - In ranking, we first compute the average DSC and average HD of **WHS** across all cases of test data. After that, the final score for one team is computed as the sum of team’s ranks in the DSC and HD rankings.
 - The team that has **lowest** the final score will get the best performance award

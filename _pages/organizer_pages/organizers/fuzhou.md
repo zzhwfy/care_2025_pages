@@ -3,6 +3,3 @@
 **College of Physics and Information Engineering**
 * Liqin Huang
 * Xingtao Lin ([Contact person for CARE-Left Atrium](mailto:231110040@fzu.edu.cn))
-<!--
-* Zhen Zhang
-!-->
