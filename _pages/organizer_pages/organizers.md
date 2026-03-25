@@ -16,10 +16,10 @@ profiles:
     image: fjm-logo.png
     content: organizers/fjm.md
     image_circular: false # crops the image to make it circular
-  - align: right
-    image: oxford-logo.png
-    content: organizers/oxford.md
-    image_circular: false # crops the image to make it circular
+  #- align: right
+  #  image: oxford-logo.png
+  #  content: organizers/oxford.md
+  #  image_circular: false # crops the image to make it circular
   - align: right
     image: cam-logo.png
     content: organizers/cam.md
