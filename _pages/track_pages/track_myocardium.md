@@ -5,12 +5,12 @@ description: Myocardial Pathology Segmentation
 permalink: /track_myocardium/
 bibliography: reference.bib
 toc:
+  - name: Registration
   - name: Motivation
   - name: Tasks
   - name: Data details
   - name: Metrics
   - name: Rules
-  - name: Registration
   - name: Leaderboards
   - name: Citations
 _styles: >
@@ -26,6 +26,8 @@ _styles: >
     grid-column: text;
   }
 ---
+## Registration
+To access the dataset, please register [here](http://zmic.org.cn/care_2026/eval/register?track=myocardium).
 
 ## Motivation
 {% include figure.liquid loading="eager" path="/assets/img/myocardium.png" class="img-fluid" max-width="70%" zoomable=true caption="Figure 1. Myocardial pathology segmentation and its challenges. (A) Myocardial Pathology Segmentation: Scar and edema regions are marked in green and yellow, respectively. (B) Cine MyoPS: Scar regions are marked in blue. (C) Challenges of Myocardial Pathology Segmentation: The challenges include multi-center data, missing sequences, and misalignments in multi-sequence CMR images." %}
@@ -282,10 +284,6 @@ The performance of scar and edema segmentation results will be evaluated by：
 ## Rules
 - **Only automatic methods are acceptable.** Participants must utilize algorithms that do not require manual intervention or human-assisted processes for the segmentation task.
 - **Pre-trained models are  allowed in this track.** The solutions could be developed with pre-trained fundation models, such as SAM, CLIP, and MedSAM.
-
-## Registration
-To access the dataset, please register [here](http://zmic.org.cn/care_2026/eval/register?track=myocardium).
-
 
 
 ## Citations

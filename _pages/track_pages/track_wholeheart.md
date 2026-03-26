@@ -5,11 +5,11 @@ description: Whole Heart Segmentation
 permalink: /track_wholeheart/
 bibliography: reference.bib
 toc:
+  - name: Registration
   - name: Motivation
   - name: Task
   - name: Data
   - name: Rules
-  - name: Registration
   - name: Metrics
   - name: Award Policy
   - name: Leaderboards
@@ -27,11 +27,12 @@ _styles: >
     grid-column: text;
   }
 ---
+## Registration
+To access the dataset, please register [here](http://zmic.org.cn/care_2026/eval/register?track=wholeheart).
 
 ## Motivation
 
 Cardiovascular diseases (CVDs), as the leading cause of death globally<d-cite key="whs1"></d-cite>, necessitate precise morphological and pathological quantification through segmentation of crucial cardiac structures from medical images<d-cite key="whs2"></d-cite>. However, whole heart segmentation (WHS) faces challenges including heart shape variability during the cardiac cycle, clinical artifacts like motion and poor contrast-to-noise ratio, as well as domain shifts in multi-center data and the distinct modalities of CT and MRI. CARE-Whole Heart serves to inspire innovative solutions in the realms of biomedical imaging and computer vision, striving to overcome these challenges and advance automated WHS for enhanced understanding and treatment of CVDs.
-
 
 ## Task
 {% include figure.liquid loading="eager" path="/assets/img/whs.png" class="img-fluid" zoomable=true max-width="70%" caption="Figure 1. Overview of CARE-Whole Heart" %}
@@ -224,8 +225,6 @@ mr_test
 - **Pre-trained models are allowed.** In this track, the solutions could be developed with open pre-trained fundation models, such as SAM, CLIP and MedSAM.
 - **Publicly available data is allowed.** In this track, participants may also include publicly available data. Such additional data needs to be publicly available **before** the date of the test results submission (July 10, 2026). Private annotations of such data is prohibited.
 
-## Registration
-To access the dataset, please register [here](http://zmic.org.cn/care_2026/eval/register?track=wholeheart).
 
 ## Metrics
 The performance of segmentation results will be assessed through: 
@@ -239,7 +238,7 @@ The performance of segmentation results will be assessed through:
 This track will give **2** best performance awards according to performances across **CT** images and **MRI** images, refered to as **Whole heart segmentation (CT)** and **Whole heart segmentation (MRI)**, respectively. 
 
 - In ranking, we first compute the average DSC and average HD of **WHS** across all cases of test data. After that, the final score for one team is computed as the sum of team’s ranks in the DSC and HD rankings.
-- The team that has **lowest** the final score will get the best performance award
+- The team that has the **lowest** final score will get the best performance award
 - **Ties are permitted when teams achieve identical scores.**
 
 

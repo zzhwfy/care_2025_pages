@@ -5,11 +5,11 @@ description: Liver Fibrosis Quantification and Analysis
 permalink: /track_liver/
 bibliography: reference.bib
 toc:
+  - name: Registration
   - name: Motivation
   - name: Tasks
   - name: Data
   - name: Rules
-  - name: Registration
   - name: Leaderboards
   - name: Citations
 _styles: >
@@ -25,6 +25,8 @@ _styles: >
     grid-column: text;
   }
 ---
+## Registration
+To access the dataset, please register [here](http://zmic.org.cn/care_2026/eval/register?track=liver).
 
 ## Motivation
 {% include figure.liquid loading="eager" path="/assets/img/liqa1.png" class="img-fluid" zoomable=true caption="Figure 1. Track description." max-width="70%" %}
@@ -178,9 +180,6 @@ Segment the liver in multi-phase fibrosis, where **limited ground truth of Hepat
 ## Rules
 1. Publicly available data (such as [LLD-MMRI2023](https://github.com/LMMMEng/LLD-MMRI2023)) and pre-trained models are allowed. 
 2. Only automatic methods are acceptable. 
-
-## Registration
-To access the dataset, please register [here](http://zmic.org.cn/care_2026/eval/register?track=liver).
 
 ## Leaderboards
 For LiFS, participants submit four-class probabilities for fibrosis staging (S1-S4). The organisers will compute AUC and ACC for two derived binary clinical subtasks: S1–S3 vs. S4 and S1 vs. S2–S4. Methods that use any contrast-enhanced GED modality are evaluated under the contrast-enhanced subtask, while methods that use only non-contrast modalities are evaluated under the non-contrast subtask.
