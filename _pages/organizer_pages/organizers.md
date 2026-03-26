@@ -57,7 +57,7 @@ profiles:
     content: organizers/renji.md
     image_circular: false # crops the image to make it circular
   - align: right
-    image: ic-logo.png
+    image: ic-logo_new.png
     content: organizers/ic.md
     image_circular: false # crops the image to make it circular
   - align: right
