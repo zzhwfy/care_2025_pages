@@ -5,12 +5,12 @@ description: Left Atrial Segmentation and Analysis
 permalink: /track_leftatrium/
 bibliography: reference.bib
 toc:
+  - name: Registration
   - name: Motivation
   - name: Task
   - name: Data
   - name: Metrics
   - name: Rules
-  - name: Registration
   - name: Leaderboards
   - name: Citations
   - name: Contact
@@ -27,6 +27,9 @@ _styles: >
     grid-column: text;
   }
 ---
+## Registration
+To access the dataset, please register [here](http://zmic.org.cn/care_2026/eval/register?track=leftatrium).
+
 
 ## Motivation
 
@@ -93,17 +96,17 @@ This data was original collected from Fuzhou University Affiliated Provincial Ho
 
 The dataset has been divided into three main parts: training, validation, and test sets:
 
-**LA scar quantification (MRI)**:
+**Task 1: LA scar quantification (MRI)**:
 - **Training Set**: 60 LGE MRIs from Center A 
 - **Validation Set**: 10 LGE MRIs from Center A 
 - **Test Set**: 24 LGE MRIs from Center A 
   
-**LA cavity segmentation (MRI)**:
+**Task 2: LA cavity segmentation (MRI)**:
 - **Training Set**: 130 LGE MRIs from Centers A 
 - **Validation Set**: 10 LGE MRIs from Center A and 10 LGE MRIs from Center C 
 - **Test Set**: 14 LGE MRIs from Center A, 20 LGE MRIs from Center B and 10 LGE MRIs from Center C  <!-- , 40 LGE MRIs from Center 2.2-->
 
-**cardiac anatomy segmentation (CT)**:
+**Task 3: Cardiac anatomy segmentation (CT)**:
 - **Training Set**: 150 CTs from Center D
 - **Validation Set**: 20 CTs from Center D
 - **Test Set**: 130 CTs from Center D 
@@ -113,7 +116,7 @@ Each LGE MRI, CT and gold standard label(s) of patients will be provided in the 
 - enhanced.nii.gz (LGE MRI)s'ba
 - atriumSegImgMO.nii.gz (gold standard LA cavity label)
 - scarSegImgM.nii.gz (gold standard LA scar label, for task 1 only)
-- cardiacSegImgMO.nii.gz(gold standard labels of left atrium,pulmonary veins and left atrial appendage, for task 3 only)
+- cardiacSegImgMO.nii.gz(gold standard labels of left atrium, pulmonary veins and left atrial appendage, for task 3 only)
 
 The submitted format of the prediction for the participants could be named as follows:
 - LA_predict.nii.gz (predicted LA cavity label)
@@ -125,16 +128,16 @@ The submitted format of the prediction for the participants could be named as fo
 
 The performance of LA cavity segmentation, LA scar quantification and cardiac structure segmentation results will be evaluated by：
 
-**LA scar quantification (MRI)**:
+**Task 1: LA scar quantification (MRI)**:
 - **Generalized Dice Similarity Coefficient (G-DSC)** <d-cite key="lascarqs6">
 - **Accuracy (ACC)**
 - **Sensitivity (SEN)**
 
-**LA cavity segmentation (MRI)**:
+**Task 2: LA cavity segmentation (MRI)**:
 - **Dice Similarity Coefficient (DSC)**
 - **Hausdorff Distance (HD)**
 
-**cardiac anatomy segmentation (CT)**:
+**Task 3: Cardiac anatomy segmentation (CT)**:
 - **Dice Similarity Coefficient (DSC)**
 - **Hausdorff Distance (HD)**
 
@@ -143,10 +146,6 @@ The performance of LA cavity segmentation, LA scar quantification and cardiac st
 2. Only automatic methods are permitted.
 3. Participants are encouraged to attempt all tasks, but they also can choose to focus on one of them. 
 4. We will only award prizes for LA scar quantification (MRI) and cardiac anatomy segmentation (CT).
-
-
-## Registration
-To access the dataset, please register [here](http://zmic.org.cn/care_2026/eval/register?track=leftatrium).
 
 ## Leaderboards
 Leaderboards will be released after test results submission.
