@@ -91,7 +91,7 @@ The challenge has **1** best paper and **2** runner-ups. In addition, CARE 2026 
 
 **CARE-Left Atrium**: 
 - LA scar quantification (MRI) 
-- LA anatomy segmentation (CT)
+- LA multi-structure segmentation (CT)
 
 **CARE-Liver**: 
 - Liver Fibrosis Staging (LiFS)
