@@ -80,4 +80,8 @@ profiles:
     image: pakistan_lums-logo.png
     content: organizers/pakistan_lums.md
     image_circular: false # crops the image to make it circular
+  - align: right
+    image: manchester-logo.png
+    content: organizers/manchester.md
+    image_circular: false # crops the image to make it circular
 ---
