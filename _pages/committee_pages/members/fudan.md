@@ -1,4 +1,4 @@
-<h5><strong>Fudan University</strong></h5>
+<h5><strong>Fudan University (China)</strong></h5>
 
 **School of Data Science**
 * [Xiahai Zhuang](https://zmiclab.github.io/zxh/) (Event leader)
