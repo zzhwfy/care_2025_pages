@@ -106,7 +106,7 @@ The dataset has been divided into three main parts: training, validation, and te
 - **Validation Set**: 10 LGE MRIs from Center A and 10 LGE MRIs from Center C 
 - **Test Set**: 14 LGE MRIs from Center A, 20 LGE MRIs from Center B and 10 LGE MRIs from Center C  <!-- , 40 LGE MRIs from Center 2.2-->
 
-**Task 3: Cardiac anatomy segmentation (CT)**:
+**Task 3: LA multi-structure segmentation (CT)**:
 - **Training Set**: 150 CTs from Center D
 - **Validation Set**: 20 CTs from Center D
 - **Test Set**: 130 CTs from Center D 
@@ -137,7 +137,7 @@ The performance of LA cavity segmentation, LA scar quantification and cardiac st
 - **Dice Similarity Coefficient (DSC)**
 - **Hausdorff Distance (HD)**
 
-**Task 3: Cardiac anatomy segmentation (CT)**:
+**Task 3: LA multi-structure segmentation (CT)**:
 - **Dice Similarity Coefficient (DSC)**
 - **Hausdorff Distance (HD)**
 
@@ -145,7 +145,7 @@ The performance of LA cavity segmentation, LA scar quantification and cardiac st
 1. External data sets and pre-trained models are NOT allowed in this track.
 2. Only automatic methods are permitted.
 3. Participants are encouraged to attempt all tasks, but they also can choose to focus on one of them. 
-4. We will only award prizes for LA scar quantification (MRI) and cardiac anatomy segmentation (CT).
+4. We will only award prizes for LA scar quantification (MRI) and LA multi-structure segmentation (CT).
 
 ## Leaderboards
 Leaderboards will be released after test results submission.
