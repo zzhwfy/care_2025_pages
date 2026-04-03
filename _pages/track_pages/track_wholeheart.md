@@ -231,15 +231,13 @@ The performance of segmentation results will be assessed through:
 - **Dice Similarity Coefficient (DSC)**: DSC is well-suited for assessing the overlap or agreement between the predicted segmentation and the ground truth, making it particularly useful when the regions of interest in medical images may partially overlap.
 - **Hausdorff Distance (HD in mm)**: HD measures the maximum distance between two sets, indicating the degree of boundary mismatch.
 
-- We will provide multiple leaderboards, representing stratified performance across different modalities. In each leaderboard, in addition to DSC and HD of 7 cardiac substructures, we will also report DSC and HD of whole heart segmentation (WHS), which are weighted average (according to their volumes) from 7 substructures. 
-
-## Award Policy
+<!--## Award Policy
 
 This track will give **2** best performance awards according to performances across **CT** images and **MRI** images, refered to as **Whole heart segmentation (CT)** and **Whole heart segmentation (MRI)**, respectively. 
 
 - In ranking, we first compute the average DSC and average HD of **WHS** across all cases of test data. After that, the final score for one team is computed as the sum of team’s ranks in the DSC and HD rankings.
 - The team that has the **lowest** final score will get the best performance award
-- **Ties are permitted when teams achieve identical scores.**
+- **Ties are permitted when teams achieve identical scores.**-->
 
 
 <!--We will rank participant methods based on the settings (​Lb1–Lb4) detailed in the following table:
@@ -272,6 +270,8 @@ This track will give **2** best performance awards according to performances acr
 
 ## Leaderboards
 Leaderboards will be released after test results submission.
+
+- We will provide multiple leaderboards, representing stratified performance across different modalities. In each leaderboard, in addition to DSC and HD of 7 cardiac substructures, we will also report DSC and HD of whole heart segmentation (WHS), which are weighted average (according to their volumes) from 7 substructures. 
 
 ## Citations
 **Please cite these papers when you use the data for publications:**
