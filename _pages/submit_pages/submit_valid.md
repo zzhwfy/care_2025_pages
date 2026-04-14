@@ -8,11 +8,7 @@ Participants can directly upload your predictions (in nifty format) via the eval
 
 #### Summary of Evaluation Platforms
 
-Evaluation platform is under construction.
-
-<!-- 
 - [**CARE-Left Atrium** evaluation platform](https://zmic.org.cn/care_2026/eval/login?track=leftatrium)
 - [**CARE-Liver** evaluation platform](https://zmic.org.cn/care_2026/eval/login?track=liver)
 - [**CARE-Myocardium** evaluation platform](https://zmic.org.cn/care_2026/eval/login?track=myocardium)
 - [**CARE-Whole Heart** evaluation platform](https://zmic.org.cn/care_2026/eval/login?track=wholeheart)
--->
