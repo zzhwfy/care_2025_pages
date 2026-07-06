@@ -43,7 +43,7 @@ Listed below are official requirements for preparing and submitting a manuscript
 
 All deadlines are on 23:59 in Pacific Standard Time.
 
-- Paper Submission:  **July 20, 2026**
+- Paper Submission:  **July 27, 2026 (Updated!)**
 - Paper Acceptance Notification:  **August 10, 2026**
 - Camera Ready:  **August 24, 2026**
 
