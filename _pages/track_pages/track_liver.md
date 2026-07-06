@@ -227,6 +227,16 @@ The evaluation metrics for each task are summarized in the table below. The lead
 ## Citations
 **Please cite these papers when you use the data for publications:**
 ```bib
+@misc{liu2026faraicomeliver,
+      title={How Far Has AI Come in Liver Fibrosis Staging? A Large-Scale Real-World Dataset and Benchmark}, 
+      author={Yuanye Liu and Nannan Shi and Zhejia Zhang and Hanxiao Zhang and Boya Wang and Derong Yu and Nao Wang and Yuxin Jin and Yang Zhou and Kunhao Yuan and Siqi Wang and Lida Yang and Xu Qiao and Wentao Liu and Xuelei He and Xin Hong and Guoyan Zheng and Xin Chen and Guang-Zhong Yang and Le Zhang and Lei Li and Yuxin Shi and Xiahai Zhuang},
+      year={2026},
+      eprint={2605.25595},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2605.25595}, 
+}
+
 @article{liu2025merit,
   title = {MERIT: Multi-view evidential learning for reliable and interpretable liver fibrosis staging},
   author={Liu, Yuanye and Gao, Zheyao and Shi, Nannan and Wu, Fuping and Shi, Yuxin and Chen, Qingchao and Zhuang, Xiahai},
