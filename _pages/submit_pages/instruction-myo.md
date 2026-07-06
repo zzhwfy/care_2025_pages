@@ -133,8 +133,8 @@ CineMyoPS-<TeamName>.tar.gz
 
 ## Important Dates
 - **Test Phase Start**: June 10, 2026
-- **Docker Submission Deadline**: July 10, 2026
-- **Abstract & Paper Submission Deadline**: July 20, 2026
+- **Docker Submission Deadline**: July 27, 2026 (Updated!)
+- **Abstract & Paper Submission Deadline**: July 27, 2026 (Updated!)
 
 
 ## Final Notes
