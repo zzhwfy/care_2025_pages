@@ -4,7 +4,7 @@ title: Home
 permalink: /
 ---
 <div style="border-left: 5px solid #f97316; background-color: #fff7ed; padding: 1rem; margin: 1rem 0; border-radius: 0.5rem; color: #7c2d12;">
-<p>Submission deadlines have been extended to July 27, 2026! We have sent the notification to the registered emails. You can refer to our <a href="https://www.zmic.org.cn/care_2026/test_submission/" target="_blank" rel="noopener noreferrer"><strong>Test Submission Page</strong></a> and <a href="https://www.zmic.org.cn/care_2026/paper_submission/" target="_blank" rel="noopener noreferrer"><strong>Paper Submission Page</strong></a> for more details.</p>
+<p>Docker submission deadline has been extended to August 03, 2026! We have sent the notification to the registered emails. You can refer to our <a href="https://www.zmic.org.cn/care_2026/test_submission/" target="_blank" rel="noopener noreferrer"><strong>Test Submission Page</strong></a> and <a href="https://www.zmic.org.cn/care_2026/paper_submission/" target="_blank" rel="noopener noreferrer"><strong>Paper Submission Page</strong></a> for more details.</p>
 <p><strong>Note</strong>: The submission of test results and the paper are separate. That is, participants can submit only the Docker container for testing, or only the paper, or both.</p>
 <p><strong>Note</strong>: The validation platform remains active during the test phase; you may continue submitting validation predictions as per previous instructions, and the leaderboard will update accordingly.</p>
 <p>If you have any questions, please contact <a href="mailto:care26challenge@163.com">care26challenge@163.com</a> or <a href="mailto:care2026challenge@outlook.com">care2026challenge@outlook.com</a>.</p>
@@ -66,7 +66,7 @@ The schedule for this track is as follows. All deadlines (DDLs) are on 23:59 in 
     </tr>
     <tr>
     <td class="text-left"><strong>Test Results Submission</strong></td>
-    <th scope="row" style="width: 60%" class="text-right"><strong>July 27, 2026 (Updated!)</strong></th>
+    <th scope="row" style="width: 60%" class="text-right"><strong>August 03, 2026 (Updated!)</strong></th>
     </tr>
     <tr>
     <td class="text-left"><strong>Abstract Submission</strong></td>

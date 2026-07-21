@@ -57,3 +57,4 @@ Please submit your abstract and paper via the following submission portal:
 The authors need to have a **OpenReview account** before submitting papers.
 
 - The instructions to create the OpenReview account: [https://docs.openreview.net/getting-started/creating-an-openreview-profile/signing-up-for-openreview](https://docs.openreview.net/getting-started/creating-an-openreview-profile/signing-up-for-openreview)
+- **Note**: OpenReview often takes several days to verify new accounts. We strongly recommend that all authors register on OpenReview well in advance of the deadline to avoid last-minute delays.

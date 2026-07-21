@@ -26,7 +26,7 @@ Include in the email body:
   - `LiSeg` — Liver Segmentation
 - **For `LiFS` submissions — the exact list of input modalities your pipeline requires** (e.g., `DWI_800, T1, T2`). Based on this list, we will prepare the test input dataset so that **only the modalities you specify are placed in `/input`** — any modality you do not list will not be provided. Please state this clearly in your email. (For `LiSeg`, all available modalities are provided by default.)
 
-Each team is allowed **up to two successful submissions per task (LiFS / LiSeg)**. Failed submissions (e.g., due to runtime errors or invalid outputs) **do not count** toward this limit. After a successful first submission, we will provide a feedback report with evaluation metrics. You may then submit an improved Docker image for the second attempt.
+Each team is allowed **up to 3 successful submissions per task (LiFS / LiSeg)**. Failed submissions (e.g., due to runtime errors or invalid outputs) **do not count** toward this limit. After a successful first submission, we will provide a feedback report with evaluation metrics. You may then submit an improved Docker image for the second attempt.
 
 ## Test Data Format
 
@@ -163,5 +163,5 @@ Predictions will be evaluated offline by the organizers and the results publishe
 
 ## Important Dates
 - **Test Phase Start**: June 10, 2026
-- **Docker Submission Deadline**: July 27, 2026 (Updated!)
+- **Docker Submission Deadline**: August 03, 2026 (Updated!)
 - **Abstract & Paper Submission Deadline**: July 27, 2026 (Updated!)

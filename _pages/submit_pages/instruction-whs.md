@@ -20,7 +20,7 @@ Include in the email body:
 - A **download link** to your Docker image, hosted on Google Drive, Mega, Baidu Netdisk, or a similar service.
 - The **docker commands** to run the Docker container (if not using an ENTRYPOINT), along with any additional instructions required to execute your pipeline. Note: we would like to run all code **CPU-only** for compatibility reasons. If you want to use a GPU, please let us know.
 
-Each team is allowed **up to two submissions**. Failed submissions (e.g., due to runtime errors or invalid outputs) **do not count** toward this limit. After a successful first submission, we will provide a feedback report with evaluation metrics. You may then submit an improved Docker image for the second attempt.
+Each team is allowed **up to 3 submissions**. Failed submissions (e.g., due to runtime errors or invalid outputs) **do not count** toward this limit. After a successful first submission, we will provide a feedback report with evaluation metrics. You may then submit an improved Docker image for the second attempt.
 
 ## Docker Requirements
 
@@ -116,7 +116,7 @@ You can view [Docker Homepage](www.docker.com) for further reference.
 
 ## Important Dates
 - **Test Phase Start**: June 10, 2026
-- **Docker Submission Deadline**: July 27, 2026 (Updated!)
+- **Docker Submission Deadline**: August 03, 2026 (Updated!)
 - **Abstract & Paper Submission Deadline**: July 27, 2026 (Updated!)
 
 

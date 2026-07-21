@@ -23,7 +23,7 @@ Include in the email body:
   - `MyoPS`
   - `CineMyoPS`
 
-Each team is allowed **up to two submissions per task**. Failed submissions (e.g., due to runtime errors or invalid outputs) **do not count** toward this limit. After a successful first submission, we will provide a feedback report with evaluation metrics. You may then submit an improved Docker image for the second attempt.
+Each team is allowed **up to 3 submissions per task**. Failed submissions (e.g., due to runtime errors or invalid outputs) **do not count** toward this limit. After a successful first submission, we will provide a feedback report with evaluation metrics. You may then submit an improved Docker image for the second attempt.
 
 ## Running Your Docker
 
@@ -133,7 +133,7 @@ CineMyoPS-<TeamName>.tar.gz
 
 ## Important Dates
 - **Test Phase Start**: June 10, 2026
-- **Docker Submission Deadline**: July 27, 2026 (Updated!)
+- **Docker Submission Deadline**: August 03, 2026 (Updated!)
 - **Abstract & Paper Submission Deadline**: July 27, 2026 (Updated!)
 
 
