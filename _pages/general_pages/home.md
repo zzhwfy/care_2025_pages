@@ -96,7 +96,7 @@ permalink: /
     </tr>
     <!-- Oral 3 -->
     <tr>
-      <td style="padding:8px; border-bottom:1px solid #ddd;">DOVE: Domain-Robust Ordinal Evidence Learning with 2.5D Multiple Instance Learning for MRI-Based Liver Fibrosis Staging</td>
+      <td style="padding:8px; border-bottom:1px solid #ddd;">Stable Morphology, Unstable Deep Classifiers: Morphology-Guided Ranking in Unlabeled Liver MRI Cohorts</td>
       <td style="padding:8px; border-bottom:1px solid #ddd;">16:55 – 17:05</td>
       <td style="padding:8px; border-bottom:1px solid #ddd;"><b>—</b></td>
     </tr>
@@ -132,7 +132,7 @@ permalink: /
     </tr>
     <!-- Oral 8 -->
     <tr>
-      <td style="padding:8px; border-bottom:1px solid #ddd;">Stable Morphology, Unstable Deep Classifiers: Morphology-Guided Ranking in Unlabeled Liver MRI Cohorts</td>
+      <td style="padding:8px; border-bottom:1px solid #ddd;">DOVE: Domain-Robust Ordinal Evidence Learning with 2.5D Multiple Instance Learning for MRI-Based Liver Fibrosis Staging</td>
       <td style="padding:8px; border-bottom:1px solid #ddd;">17:45 – 17:55</td>
       <td style="padding:8px; border-bottom:1px solid #ddd;"><b>—</b></td>
     </tr>
